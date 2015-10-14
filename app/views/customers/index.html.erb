@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Elenco Clienti</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ragione Sociale</th>
+      <th>e-mail</th>
+      <th> </th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.company_name %></td>
+        <td><%= customer.email %></td>
+        <td><%=link_to "rapportini", reports_path(:customer_id => customer.id)%></td>
+
+        <td>
+          <%= link_to 'Visualizza', customer %><br/>
+          <%= link_to 'Modifica', edit_customer_path(customer) %><br/>
+          <%= link_to 'Elimina', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </tD>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuovo Cliente', new_customer_path %>

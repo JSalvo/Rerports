@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyText
+  address: MyText
+  cap: MyText
+  city: MyText
+  email: MyText
+  cf: MyText
+  piva: MyText
+  hour_price: 9.99
+
+two:
+  company_name: MyText
+  address: MyText
+  cap: MyText
+  city: MyText
+  email: MyText
+  cf: MyText
+  piva: MyText
+  hour_price: 9.99

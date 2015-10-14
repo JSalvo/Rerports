@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_date: 2015-09-28
+  hour: 2015-09-28 23:17:26
+  hour_trip: 2015-09-28 23:17:26
+  billed: false
+  customer_id: 
+
+two:
+  report_date: 2015-09-28
+  hour: 2015-09-28 23:17:26
+  hour_trip: 2015-09-28 23:17:26
+  billed: false
+  customer_id: 

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ragione Sociale:</strong>
+  <%= @customer.company_name %>
+</p>
+
+<p>
+  <strong>Indirizzo:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>CAP:</strong>
+  <%= @customer.cap %>
+</p>
+
+<p>
+  <strong>Città:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>Provincia:</strong>
+  <%= @customer.county %>
+</p>
+
+<p>
+  <strong>e-mail:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Codice Fiscale:</strong>
+  <%= @customer.cf %>
+</p>
+
+<p>
+  <strong>Partita IVA:</strong>
+  <%= @customer.piva %>
+</p>
+
+<p>
+  <strong>Prezzo Orario:</strong>
+  <%= @customer.hour_price %>
+</p>
+
+<%= link_to 'Modifica', edit_customer_path(@customer) %> |
+<%= link_to 'Indietro', customers_path %>
