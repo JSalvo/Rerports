@@ -2,7 +2,9 @@
 
 <%= link_to 'Back to customers', customers_path  %>
 
-<h1>Elenco dei rapportini di <%=@customer.company_name %></h1>
+<h1 id="casino">Elenco dei rapportini di <%=@customer.company_name %></h1>
+
+
 
 <table>
   <thead>
@@ -18,24 +20,12 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @reports.each do |report| %>
-      <tr>
-		<td><%= report.id  %></td>
-        <td><%= report.report_date.strftime("%d/%m/%Y") %></td>
-        <td><%= report.hour.to_formatted_s(:time) %></td>
-        <td><%= report.hour_trip.to_formatted_s(:time) %></td>
-		<td><%= report.description %></td>
-		<td><%= report.billed ? "Si" : "No" %></td>
-
-
-        <td>
-          <%= link_to 'Visualizza', report %><br/>
-          <%= link_to 'Modifica', edit_report_path(report) %><br/>
-          <%= link_to 'Elimina', report, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
-        </td>
-      </tr>
-    <% end %>
+	<tbody  >
+		<% @reports.each do |report| %>
+			<tr class="update_billed2">
+				<%= render report %>
+			</tr>
+		<% end %>
   </tbody>
 </table>
 

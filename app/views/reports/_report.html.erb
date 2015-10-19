@@ -1,0 +1,29 @@
+
+<td id="row<%=report.id%>"><%= report.id  %></td>
+<td><%= report.report_date.strftime("%d/%m/%Y") %></td>
+<td><%= report.hour.to_formatted_s(:time) %></td>
+<td><%= report.hour_trip.to_formatted_s(:time) %></td>
+<td><%= report.description %></td>
+<td>
+	<% if true %>
+	<% if report.billed then %>
+		<%= link_to "Si", {action: "togglebilled", report_id: report.id, remote: true}, {:class => 'update_billed'} %>
+	<% else %>
+		<%=	link_to "No",  {action: "togglebilled", report_id: report.id, remote: true}, {:class => 'update_billed'}  %>
+	<%end%>
+	<span class="glyphicons glyphicons-glass gly-spin"></span>
+	<% end %>
+
+	<% if false %>
+	<span class="gly-spin"><img src="glyphicons-83-roundabout.png" class=""></img>
+	</span>
+	<% end %>
+
+</td>
+
+
+<td>
+	<%= link_to 'Visualizza', report %><br/>
+	<%= link_to 'Modifica', edit_report_path(report) %><br/>
+	<%= link_to 'Elimina', report, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+</td>

@@ -23,6 +23,20 @@ class ReportsController < ApplicationController
   def edit
   end
 
+ 	def togglebilled
+		@report = Report.find(params[:report_id])
+
+		@report.billed = !@report.billed
+		@report.save
+
+		sleep 1
+
+		respond_to do |format|
+			format.js
+		end
+	end
+
+
   # POST /reports
   # POST /reports.json
   def create

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+	get 'reports/togglebilled' => 'reports#togglebilled'
+
   resources :activities
   resources :reports
   resources :customers

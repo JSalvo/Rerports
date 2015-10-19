@@ -13,4 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap.min
 //= require_tree .
+
+
+$(document).on('ready page:load', function () {
+  // Actions to do
+
+  $('.update_billed2').on('ajax:beforeSend', '.update_billed', function() {
+      $(this).fadeOut();
+  });
+
+});
